@@ -133,3 +133,6 @@ def solution(participant, completion):
 participant = ['leo', 'kiki', 'eden']
 completion = ['eden', 'kiki']
 print(solution(participant , completion))
+
+for i in participant[:]:
+    print(i)
