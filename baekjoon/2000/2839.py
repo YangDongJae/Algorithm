@@ -16,16 +16,18 @@ if data < 3 or data > 5000:
 else:
     a = data % 5
     result += data // 5
+    b = data % 3
         
         
     if a > 0:
         if a == 4:
-            result = -1
-                
+            if b == 0:
+                result = data // 3
+            
+            else:
+                result = -1
+   
         else:
             result += 1
 
 print(result)
-                
-# %3으로 나누어 떨어질 때 
-# 3,5의 최소공배수값들 
