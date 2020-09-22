@@ -13,19 +13,20 @@ data_range = 2
 update_data_range = 1 + 6 
 
 result = 0
-
+count = 1
 if data < 1 or data >= 1000000000:
     print('error! please check your input data range!')
 
 else:
     range_list = list(range(data_range , update_data_range))
 
-    for i in range ( 1, 10):
+    while True:
         if data == 1:
             print('0')
-        
+            break
+
         elif data in range_list:
-            print(i)
+            print(count)
             break
 
         else:
@@ -35,7 +36,7 @@ else:
             range_list = list(range(data_range , update_data_range + 1))
             print(data_range , " : " , update_data_range)
             print(range_list)
-            print(i)
+            count += 1
             print("---")
 
         
