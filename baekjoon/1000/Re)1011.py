@@ -16,3 +16,4 @@ for i in range (eval(input())):
         print(handler * 2)
     else:
         print((handler * 2) + 1)
+        
