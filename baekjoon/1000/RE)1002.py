@@ -23,7 +23,4 @@ for i in range(count):
     m = max(R); R.remove(m)
     print(-1 if (r == 0 and r1 == r2) else 1 if (r == r1 + r2 or m == sum(R)) else 0 if (m > sum(R))else 2)
 
-# 3
-# 0 0 13 40 0 37
-# 0 0 3 0 7 4
-# 1 1 1 1 1 5
+#원의 내접 , 외접
