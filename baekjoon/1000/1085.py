@@ -18,3 +18,6 @@ if w <= 1000 and h <= 1000 and x >= 1 and x <= w -1 and y >= 1 and y <= h - 1 :
         print(depth)
     else:
         print(width)
+
+
+        ###개편필요
