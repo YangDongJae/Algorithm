@@ -7,7 +7,7 @@
  x는 1보다 크거나 같고, w-1보다 작거나 같은 자연수이고,  y는 1보다 크거나 같고,
   h-1보다 작거나 같은 자연수이다.
 """
-
+m
 x , y , w , h = map(int , input().split(' '))
 
 if w <= 1000 and h <= 1000 and x >= 1 and x <= w -1 and y >= 1 and y <= h - 1 :
