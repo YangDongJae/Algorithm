@@ -1,17 +1,12 @@
 def test(word):
-  if len(word) != 1:
-    pointer = word[0]
-    next = word[1]
-
-    for i in range (len(word) - 2):
-      if pointer != next:
-        if pointer in word[i + 2:]:
-          return False
-          break
-      else:
-        pointer = word[i + 1]
-        next = word[i + 2]
-
+  point = word[0]
+  for i in range (1,len(word)):
+    if word[i] != point:
+      if point in word[i+1:]:
+        return False
+        break
+  if len(word) > 1:
+    test(word[1:])
 
 
 count = int(input())
