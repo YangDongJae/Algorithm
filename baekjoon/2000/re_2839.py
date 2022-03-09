@@ -1,8 +1,13 @@
 sugar = int(input())
+count = 0
 
-heavy = sugar // 5
-light = sugar % 5
+while sugar >= 0:
+  if sugar % 5 == 0:
+    count += sugar // 5
+    print(count)
+    break
+  sugar -= 3
+  count += 1 
 
-if light  % 3 == 0:
-  light = light // 3
 else:
+  print(-1)
