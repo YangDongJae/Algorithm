@@ -1,26 +1,23 @@
-def test(n):
-    check_list = [True] * (n + 1)
-    return_list = []
-    
-    for i in range (2, n):
-        if check_list[i] == True:
-            for j in range (i + i, n, i):
-                check_list[j] = False
+sieve = [False, False] + [True] * 9999
+count = int(10000 ** 0.5)
 
-    prime_num = [i for i in range(2,len(check_list)) if check_list[i] == True]
+for i in range (2, count + 1):
+    if sieve[i] == True:
+        for j in range (i + i , 10000, i):
+            sieve[j] = False
 
-    for k in prime_num:
-        digit = n - k
+prime_number = [i for i in range (len(sieve)) if sieve[i] == True]
 
-        if digit in prime_num:
-            return_list.append([k, digit])
+for _ in range (int(input())):
+    number = int(input())
+    result_list = []
 
-    if len(return_list) % 2 == 0:
-        return return_list[len(return_list)//2 - 1]
+    for k in prime_number:
+        digit = number - k
+        if digit in prime_number:
+            result_list.append([k, digit])
+
+    if len(result_list) % 2 == 0:
+        print(result_list[len(result_list) // 2 - 1][0],result_list[len(result_list) // 2 - 1][1])
     else:
-        return return_list[len(return_list)//2]
-
-for i in range(int(input())):
-    num = int(input())
-
-    print(test(num)[0],test(num)[1])
+        print(result_list[len(result_list)//2][0],result_list[len(result_list)//2][1])
