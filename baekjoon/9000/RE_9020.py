@@ -12,12 +12,13 @@ for _ in range (int(input())):
     number = int(input())
     result_list = []
 
-    for k in prime_number:
-        digit = number - k
-        if digit in prime_number:
-            result_list.append([k, digit])
+    a , b = number //2 , number //2
 
-    if len(result_list) % 2 == 0:
-        print(result_list[len(result_list) // 2 - 1][0],result_list[len(result_list) // 2 - 1][1])
-    else:
-        print(result_list[len(result_list)//2][0],result_list[len(result_list)//2][1])
+    while True:
+        if a in prime_number and b in prime_number:
+            print(a,b)
+            break
+
+        else:
+            a -= 1
+            b += 1
