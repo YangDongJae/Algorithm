@@ -11,6 +11,7 @@ for _ in range (int(input())):
 
   elif abs(r2 - r1) == dist or r1 + r2 == dist:
     print(1)
+    
   else:
     print(0)
-# abnormal case 1 0 0 9 1 0 1
+  
