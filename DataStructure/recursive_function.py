@@ -1,5 +1,3 @@
-# class Node():
-#   def __init__():
 class Node():
   def __init__(self,data):
     self.node = data
@@ -21,7 +19,6 @@ class Simply_Linked_list():
     self.size = 0
 
   def append(self,data):
-    node = None
     new_node = Node(data)
     self.size += 1
 
@@ -29,7 +26,12 @@ class Simply_Linked_list():
       self.header = new_node
 
     else:
-
+      node = self.header
+      while node.get_next() != None:
+        node = node.get_next()
+        break
+      node.set_next(new_node)
+        
 
   def print_list(self):
     print("------")
@@ -37,7 +39,7 @@ class Simply_Linked_list():
 
     while node != None:
       print(node.get_data())
-      node = self.header.get_next()
+      node = node.get_next()
     print("------")
 
 sll = Simply_Linked_list()
@@ -45,7 +47,8 @@ sll = Simply_Linked_list()
 sll.append("Tiger")
 sll.append("Duck")
 sll.append("Dog")
-sll.print_list() 
+
+sll.print_list()
       
 
     
